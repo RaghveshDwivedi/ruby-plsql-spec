@@ -1,0 +1,25 @@
+Steps to install ruby in RHL--Linux
+
+1. yum -y install ruby
+2. yum -y install ruby-devel
+3. yum -y install gcc
+4. gem install ruby-plsql-spec
+5. export ORACLE_HOME=<<set oracle home>>
+6. export LD_LIBRARY_PATH=$ORACLE_HOME/lib
+#Before running ruby-oci8 please set ORACLE_HOME and LD_LIBRARY_PATH
+7. gem install ruby-oci8
+
+###Verify if ruby is installed######
+ruby -v
+
+###Verify if rubygem is installed######
+gem -v
+
+###steps to use plsql-spec for sql teting
+1. create a base directory for ruby (eg. /app/ruby)
+2. change directory to base directory
+3. run below command to initialize plsql-spec
+plsql-spec init
+
+References:
+https://mikesmithers.wordpress.com/2016/11/13/testing-times-using-ruby-plsql-spec-for-testing-plsql/
